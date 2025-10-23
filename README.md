@@ -86,7 +86,6 @@ DLBDSMTP01 - M2P - Anomaly detection in an IoT setting/
 ├── Dockerfile                             # defines image build (Flask + Python environment)
 ├── docker-compose.yml                     # orchestrates multi-container run (API + Sender)
 ├── requirements.txt                       # pinned Python dependencies
-├── mermaid.md                             # workflow diagram (for documentation)
 ├── README.md                              # main project documentation
 └── .gitignore / .dockerignore             # exclude unnecessary files from Git & Docker
 ```
@@ -176,3 +175,4 @@ This project successfully simulates a complete MLOps-style workflow:
 - Demonstrating practical integration of data science and software engineering for anomaly detection in IoT settings.
 
 ---
+
