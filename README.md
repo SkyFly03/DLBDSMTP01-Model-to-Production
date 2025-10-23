@@ -40,8 +40,17 @@ pip install -q -r requirements.txt
 
 ## 2. Run with Docker and Docker Compose
 
+### Prerequisites (Docker)
+- Install **Docker Desktop** (Windows/macOS) or **Docker Engine** (Linux).
+- **Start Docker Desktop** and wait until it shows **Running**.
+- Verify from a terminal:
+  ```bash
+  docker --version
+  docker compose version
+  docker run --rm hello-world
+
 ### Build and Start Containers
-- **Launch Docker Desktop** and wait until Docker is fully started, before executing the commands below!
+
 ```bash
 docker compose up --build
 ```
@@ -175,4 +184,5 @@ This project successfully simulates a complete MLOps-style workflow:
 - Demonstrating practical integration of data science and software engineering for anomaly detection in IoT settings.
 
 ---
+
 
