@@ -1,0 +1,29 @@
+# venv / caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.vscode/
+.pytest_cache/
+
+# data & models
+models/
+*.pkl
+*.joblib
+
+# outputs & logs
+app/outputs/
+*.csv
+*.log
+*.png
+
+# env
+.env
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+

@@ -1,0 +1,46 @@
+# docker-compose.yml
+# ------------------------------------------------------------
+# Orchestrates a two-service demo:
+#   api    : Flask REST service (/predict, /health, /metrics)
+#   sender : Sidecar that streams fictional sample data to the API
+# Purpose:
+#   - Show data ingestion over a standardized API
+#   - Persist models/outputs to host for slides and inspection
+# Usage:
+#   - Start: `docker compose up --build`
+#   - Stop : `docker compose down`
+# ------------------------------------------------------------
+
+services:
+  api:
+    build: .
+    container_name: turbine-api
+    environment:
+      MODEL_PATH: models/turbine_iforest.pkl
+      PYTHONUNBUFFERED: "1"
+    ports: ["5000:5000"]
+    volumes:
+      - ./models:/app/models
+      - ./app/outputs:/app/app/outputs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; print(requests.get('http://localhost:5000/health', timeout=2).status_code)"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+      start_period: 10s
+    restart: unless-stopped
+
+  sender:
+    build: .
+    container_name: turbine-sender
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      API_URL: http://api:5000/predict
+      SENDER_COUNT: "0"     # set to a number to auto-stop
+      PYTHONUNBUFFERED: "1"
+    command: ["python", "-m", "app.sender"]
+    volumes:
+      - ./app/outputs:/app/app/outputs
+    restart: unless-stopped
