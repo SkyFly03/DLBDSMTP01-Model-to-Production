@@ -72,6 +72,7 @@ The following steps reflect a typical model-to-production workflow, where each s
   docker --version
   docker compose version
   docker run --rm hello-world
+```
 
 ### Build and Start Containers
 
@@ -208,6 +209,7 @@ This project successfully simulates a complete MLOps-style workflow:
 - Demonstrating practical integration of data science and software engineering for anomaly detection in IoT settings.
 
 ---
+
 
 
 
