@@ -1,3 +1,18 @@
+## Project Overview
+This project demonstrates an end-to-end data science model-to-production pipeline, covering data ingestion, preprocessing, modeling, evaluation, and deployment-oriented considerations.
+
+## Why this project matters
+The focus is on applying machine learning in a realistic setting, emphasizing reproducibility, structured workflows, and decision support rather than isolated academic experiments.
+
+## Tech stack
+Python · Pandas · Scikit-learn · Docker · PostgreSQL · Jupyter · Machine Learning
+
+## Project context
+Academic project designed with an industry-oriented structure and tooling.
+
+---
+---
+
 # Model to Production: Anomaly Detection in an IoT Setting - DLBDSMTP01
 
 ## Project Overview
@@ -184,5 +199,6 @@ This project successfully simulates a complete MLOps-style workflow:
 - Demonstrating practical integration of data science and software engineering for anomaly detection in IoT settings.
 
 ---
+
 
 
