@@ -1,21 +1,28 @@
-## Project Overview
-This project demonstrates an end-to-end data science model-to-production pipeline, covering data ingestion, preprocessing, modeling, evaluation, and deployment-oriented considerations.
+## ▸ Project Overview
+- **End-to-end pipeline:** from data ingestion to model evaluation  
+- **Reproducible workflow:** structured setup and execution  
+- **Applied ML focus:** decision support over toy examples  
 
-## Why this project matters
-The focus is on applying machine learning in a realistic setting, emphasizing reproducibility, structured workflows, and decision support rather than isolated academic experiments.
+## ▸ Why this project matters
+- **Realistic ML application:** designed for decision support  
+- **Production awareness:** structure, reproducibility, handover readiness  
 
-## Tech stack
-Python · Pandas · Scikit-learn · Docker · PostgreSQL · Jupyter · Machine Learning
+## ▸ Tech Stack
+- **Core language:** Python  
+- **Data & modeling:** Pandas, Scikit-learn  
+- **Environment & storage:** Docker, PostgreSQL  
+- **Workflow:** Jupyter Notebooks  
 
-## Project context
-Academic project designed with an industry-oriented structure and tooling.
+## ▸ Project Context
+- **Academic origin:** university project  
+- **Industry-oriented execution:** real-world data science structure  
 
 ---
 ---
 
 # Model to Production: Anomaly Detection in an IoT Setting - DLBDSMTP01
 
-## Project Overview
+## Detailed Project Description
 
 This project demonstrates a full end-to-end **Model-to-Production pipeline** for detecting turbine anomalies from simulated sensor data (temperature, humidity, sound).  
 It includes model training, REST API prediction, streaming ingestion, visualization, and containerization for reproducible runs.
@@ -38,11 +45,13 @@ py -3.10 -m venv .venv
 
 ### Upgrade pip and Install Dependencies
 ```bash
-python -q -m pip install --upgrade pip
-pip install -q -r requirements.txt
+python -m pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
 ### Run Project in Sequence
+The following steps reflect a typical model-to-production workflow, where each stage builds on the previous one.
+
 ```bash
 1) python -m app.train_eval           # simulate data, train model, create visuals
 2) python -m app.api                  # start REST API (http://localhost:5000)
@@ -145,7 +154,7 @@ DLBDSMTP01 - M2P - Anomaly detection in an IoT setting/
 
 ### **4.5 Data Ingestion & Streaming**
 - `app/sender.py` sends HTTP POST requests to `/predict`, mimicing real-time turbine sensor streaming.
-- Each record is POSTed to the API and Log data is stored as CSV.
+- Each record is POSTed to the API and logged as CSV output.
 - Clear anomaly visuals generated via `app/visualize_from_csv.py` → PNG outputs.
 
 ### **4.6 Reproducible Run (Container + Tests)**
@@ -199,6 +208,7 @@ This project successfully simulates a complete MLOps-style workflow:
 - Demonstrating practical integration of data science and software engineering for anomaly detection in IoT settings.
 
 ---
+
 
 
 
