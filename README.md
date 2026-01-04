@@ -1,21 +1,17 @@
 ## ▸ Project Overview
-- **End-to-end pipeline:** from data ingestion to model evaluation  
-- **Reproducible workflow:** structured setup and execution  
-- **Applied ML focus:** decision support over toy examples  
-
-## ▸ Why this project matters
-- **Realistic ML application:** designed for decision support  
-- **Production awareness:** structure, reproducibility, handover readiness  
+- **End-to-end ML pipeline:** data simulation, training, API inference, and evaluation  
+- **Reproducible execution:** Dockerized setup with clear run order  
+- **Applied focus:** anomaly detection for decision support (not toy examples)
 
 ## ▸ Tech Stack
-- **Core language:** Python  
-- **Data & modeling:** Pandas, Scikit-learn  
-- **Environment & storage:** Docker, PostgreSQL  
-- **Workflow:** Jupyter Notebooks  
+- **Language:** Python  
+- **ML:** Pandas, Scikit-learn  
+- **Infra:** Docker, PostgreSQL  
+- **Interface:** REST API (Flask)
 
 ## ▸ Project Context
 - **Academic origin:** university project  
-- **Industry-oriented execution:** real-world data science structure  
+- **Design goal:** structured to mirror real-world ML system workflows 
 
 ---
 ---
@@ -208,6 +204,7 @@ This project successfully simulates a complete MLOps-style workflow:
 - Demonstrating practical integration of data science and software engineering for anomaly detection in IoT settings.
 
 ---
+
 
 
 
